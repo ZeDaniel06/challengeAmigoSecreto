@@ -20,14 +20,27 @@ function listarAmigos(){
 }
 
 function sortearAmigo(){
+
     if(amigos.length == 0){
         alert("Você deve adicionar algum amigo na lista antes de sortear!");
     }else{
-        let numeroAleatorio = Math.floor(Math.random() * amigos.length);
-        let amigoSorteado = amigos[numeroAleatorio];
-        //<ul id="resultado" class="result-list" aria-live="polite"></ul>
-        document.getElementById("resultado").innerHTML = `<ul id="resultado" class="result-list" aria-live="polite">O teu amigo secreto é ${amigoSorteado}</ul>`;
+        if(amigosSorteados.length == amigos.length){
+            alert("Todos os amigos já foram sorteados, adicione mais amigos ou reinicie a página para começar uma nova lista para sorteio.");
+        }else{
+            let numeroAleatorio = Math.floor(Math.random() * amigos.length);
+            let amigoSorteado = amigos[numeroAleatorio];
+            if (amigosSorteados.includes(amigoSorteado)){
+                sortearAmigo();
+            }else{
+                amigosSorteados.push(amigoSorteado);
+                //<ul id="resultado" class="result-list" aria-live="polite"></ul>
+                document.getElementById("resultado").innerHTML = `<ul id="resultado" class="result-list" aria-live="polite">O teu amigo secreto é ${amigoSorteado}</ul>`;
+            }
+        }
+        
+        
         
     }
 }
 let amigos = [];
+let amigosSorteados = [];
