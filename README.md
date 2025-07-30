@@ -4,7 +4,7 @@
 Este projeto simples tem a finalidade de registrar uma lista de amigos para um amigo secreto, em apenas alguns pequenos passos é possível criar a lista e já sortear cada um.</p>
 <h1 align="center">Como utilizar:</h1>
 <p align="center">
--Acesse a aplicação clicando <a href="https://zedaniel06.github.io/challengeAmigoSecreto/">aqui.</a>
+-Acesse a aplicação clicando <a href="https://zedaniel06.github.io/challengeAmigoSecreto/">aqui.</a><br>
 - Insira um nome e então clique em "Adicionar";<br>
 -Quando já tiver adicionado todos os participantes você pode clicar em "Sortear Amigo";<br></p>
 <h1 align="center">Sobre a Validação:</h1>
